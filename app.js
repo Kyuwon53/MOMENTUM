@@ -21,9 +21,11 @@ console.log(something); // undefined
 
 //Arrays
 
-const daysOfWeek = ["mon" , "tue" ,"wed" , "thu" , "fri" , "sat" , "sun"];
+const daysOfWeek = ["mon" , "tue" ,"wed" , "thu" , "fri" , "sat"];
 
 const nonsense = [1, 2, "hello", false, null, true, undefined, "kyuwon"];
 
 console.log(daysOfWeek);
 
+// Add one more day to the array
+daysOfWeek.push("sun");

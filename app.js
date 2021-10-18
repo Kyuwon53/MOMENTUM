@@ -65,3 +65,35 @@ console.log(player);
 // data add
 player.lastName = "lee";
 console.log(player);
+
+// Functions
+function sayHello(name, age){
+  console.log("Hello my name is " + name + " and I'm " + age);
+}
+
+sayHello("kyuwon", 27); // Hello my name is kyuwon and I'm 27
+sayHello("lee", 23);  // Hello my name is lee and I'm 23
+sayHello("nico", 21); // Hello my name is nico and I'm 21
+
+function plus(firstNum, secondNum) {
+  console.log(firstNum + secondNum);
+}
+
+function divide(a, b){
+  console.log(a / b);
+}
+
+plus(8, 60);  // firstNum = 8, secondNum = 60    console.log => 68
+plus(60, 8);  // firstNum = 60, secondNum = 8    console.log => 68
+
+divide(98, 20); 
+
+const player2 = {
+  name: "kyuwon",
+  sayHello2: function(otherPersonName){
+    console.log("hello " + otherPersonName + " nice to meet you!");
+  }
+};
+
+player2.sayHello2("lynn");
+player2.sayHello2("nico");

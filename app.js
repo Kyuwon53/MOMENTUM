@@ -97,3 +97,38 @@ const player2 = {
 
 player2.sayHello2("lynn");
 player2.sayHello2("nico");
+
+// Recap
+const toBuy2 = ["potato", "tomato", "pizza"]
+
+console.log(toBuy2); //["potato", "tomato", "pizza"]
+toBuy2[2] = "water"; 
+console.log(toBuy2); //["potato", "tomato", "water"]
+toBuy2.push("meat");
+console.log(toBuy2); //["potato", "tomato", "water", "meat"]
+
+// Caculator
+
+const calculator ={
+  add: function(firstNum, secondNum){
+    console.log(firstNum + secondNum);
+  },
+  minus: function(firstNum, secondNum){
+    console.log(firstNum - secondNum);
+  },
+  devide: function(firstNum, secondNum){
+    console.log(firstNum / secondNum);
+  },
+  multi: function(firstNum, secondNum){
+    console.log(firstNum * secondNum);
+  },
+};
+
+calculator.add(1,1)
+calculator.minus(5,3)
+calculator.devide(10,2)
+calculator.multi(4,5)
+
+
+
+

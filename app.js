@@ -1,20 +1,31 @@
-const age = parseInt( prompt("How old are you?") );
+const loginForm = document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("#login-form input");
+const link = loginForm.querySelector("a");
+const greeting = document.querySelector("#greeting");
+const HIDDEN_CLASSNAME = "hidden";
 
-if(isNaN( age )){
-  console.log("Please write a number");
-}else if( age < 18 ){
-  console.log("You are too young.")
-}else if( age >= 18 && age <= 50 ){
-  console.log("You can drink")
-}else if (age > 50 && age <= 80){
-  console.log("You should exercise");
-}else if ( age > 80){
-  console.log("You can do whatever you want.");
-}else if (age !== 100){
-  console.log("wow you are wise");
+function onLoginBtnClick() {
+    const username = loginInput.value;
+    console.log(username);
+
 }
-// console.log(isNaN(age));
-// console.log(age);
-// console.log(typeof age);
-// console.log(parseInt(age));
-// console.log(typeof parseInt(age));
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    greeting.innerText = '';
+    // greeting.innerText = "Hello! " + username;
+    greeting.innerText = `Hello! ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME)
+    console.log(username);
+}
+
+function handlerLinkClick(event){
+    event.preventDefault();
+    console.log(event);
+    alert("clicked!!!!");
+}
+
+loginForm.addEventListener("submit", onLoginSubmit);
+link.addEventListener("click", handlerLinkClick);
